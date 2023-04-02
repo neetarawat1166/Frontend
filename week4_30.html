@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Guess the number</title>
+        <style>
+            .container{
+                background-color: #b88acb;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                flex-direction: column;
+                position: relative;
+            }
+            #inner{
+                color:rgb(230, 7, 66);
+                font-size: 100px;
+                
+            }
+            input{
+                font-size: large;
+                background-color: rgb(217, 226, 197);
+                color: rgb(147, 221, 9);
+                font-weight: bolder;
+                
+            }
+            p{
+                font-size: 40px;
+                color: rgb(37, 6, 235);
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <center><div class="container">
+            <div id="inner">
+                
+                
+                    <label>Guess The Number</label><br>
+                    <p id="ot">Enter a number</p>
+                    <div id="sub">
+                        <input id="enterNo">
+                        <button id="enter" onclick="checkNo()">Guess</button>
+                        <!--<button id="retr" onclick="Retry()">Retry</button>-->
+                </div>
+                <p id="op">  </p>
+                
+        </div>
+        <script>
+            var no=document.getElementById("enter");
+            
+            
+            
+            var otext=document.getElementById("op");
+            var randomNo=Math.ceil(Math.random()*10);
+            document.write(randomNo);
+            function checkNo(){
+                var inp=document.getElementById("enterNo").value;
+                
+                if(inp==randomNo){
+                    
+                    otext.innerHTML=" Congratulations!! You are correct. The number was " +randomNo;
+                    otext.style.color="red";
+                    
+                }
+                else if(inp>randomNo){
+                    
+                    otext.innerHTML="Too high";
+                    
+                    
+                }
+                else{
+                    
+                    otext.innerHTML="Too low";
+                    
+                    
+                }
+            }
+            
+            
+        </script></center>
+    </body>
+</html>

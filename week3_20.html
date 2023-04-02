@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Personal Website</title>
+    <style>
+          #social 
+      {
+        margin: 20px 10px;
+        text-align: center;
+    }
+
+    .smGlobalBtn{ /* global button class */
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 2px 2px #999;
+        padding: 0px;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        font-size: 25px;
+        font-weight: normal;
+        line-height: 2em;
+        border-radius: 25px;
+        -moz-border-radius:25px;
+        -webkit-border-radius:25px;
+    }
+
+/* google plus button class*/
+        .googleplusBtn{
+            background: #e64522;
+        }
+
+        .googleplusBtn:before{
+            font-family: "FontAwesome";
+            content: "\f0d5"; /* add googleplus icon */
+        }
+
+        .googleplusBtn:hover{
+            color: #e64522;
+            background: #fff;
+        }
+
+        /* pinterest button class*/
+        .pinterestBtn{
+            background: #cb2027;
+        }
+
+        .pinterestBtn:before{
+            font-family: "FontAwesome";
+            content: "\f0d2"; /* add pinterest icon */
+        }
+
+        .pinterestBtn:hover{
+            color: #cb2027;
+            background: #fff;
+        }
+
+        /* tumblr button class*/
+        .utube{
+            background: #e40707;
+        }
+
+        .utube:before{
+            font-family: "FontAwesome";
+            content: "\f167"; /* add tumblr icon */
+        }
+
+        .utube:hover{
+            color: #f30707;
+            background: #f0ecec;
+        }
+
+
+        body{
+            margin: 0px;
+        }
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: rgb(109, 233, 7);
+        }
+        li {
+          float: left;
+        }
+        li a {
+          display: block;
+          color: rgb(4, 36, 247);
+          text-align: center;
+          font-size: 20px;
+          padding: 14px 16px;
+          text-decoration: none;
+          flex-wrap: wrap;
+          flex-direction: column;
+        }
+        li a:hover {
+          background-color: rgb(242, 124, 6);
+          color: rgb(234, 22, 160);
+        }
+        .obox {
+        width: 100%;
+        height: 800px;
+        padding: 0px;
+        margin: 0px;
+        opacity: 1;
+        background-image:  linear-gradient(135deg, #850da6 25%, transparent 25%), linear-gradient(225deg, #850da6 25%, transparent 25%), linear-gradient(45deg, #850da6 25%, transparent 25%), linear-gradient(315deg, #850da6 25%, #e511d2 25%);
+        background-position:  5px 0, 5px 0, 0 0, 0 0;
+        background-size: 10px 10px;
+        background-repeat: repeat;
+        padding-top: 60px;
+        align-items:stretch;
+        }
+
+        /* box1 styling*/
+
+        .box{
+             /* border: 1px solid rgb(0, 0, 0); */
+             margin: 40px;
+             background-color: rgb(240, 239, 239);
+             padding: 10px;
+             box-shadow: 8px 8px #f70606df;
+             align-content: center;
+             height: 500px;
+            font-size: 40px;
+            text-align: center;
+            padding-top: 70px;
+        }     
+        .img1{
+            position: absolute;
+            top: 15%;
+            left: 45%;
+            margin-top: -40px;
+            margin-left: -40px;
+            z-index: 120;
+            border-radius: 70%;
+            width: 150px;
+            height: 150px;
+        }
+        .bottom{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }  
+        .imgbottom{
+            height: 40px;
+            width: 40px;
+            background: var(--black);
+            border-radius: 50%;
+            padding: 2px;
+            margin: 0 10px
+        }      
+        .logo{
+            border-radius: 50%;
+            width: 30px;
+            flex-direction: row;
+            float:none;
+            height: 30px;
+        }
+
+         /* box2 styling*/
+
+        .o1box{
+            width: 100%;
+            height: 800px;
+            padding: 0px;
+            background-color: #e5e5f7;
+            opacity: 1;
+            background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 17px ), repeating-linear-gradient( #f7457055, #f74570 );
+            text-align: center;
+        }
+        .box1{
+            border: 5px solid rgb(112, 223, 9);
+            margin: 40px;
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            box-shadow: 5px 10px #233fdb;
+            align-content: center;
+            padding-top: 50px;
+            height: 500px;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-left: 40px solid rgba(173, 173, 173, 0.66);
+        }
+
+         /* box3 styling*/
+        .o2box{
+        background-color: rgb(45, 155, 180);
+        width: 100%;
+        height: 800px;
+        padding: 0px;
+        margin: 0px;
+        background-color: #ededf7;
+        padding-top: 50px;
+        background-color: #1b825d;
+        opacity: 1;
+        background-image: linear-gradient(to right, #dcde1b, #dcde1b 2px, #1b825d 2px, #1b825d );
+background-size: 4px 100%;
+        text-align: center;
+        
+        }
+        .box2{
+            border: 5px solid rgb(241, 8, 125);
+            margin: 40px;
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            box-shadow: 5px 10px #25da0d;
+            align-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 50px;
+            height: 500px;
+      
+            font-size: 40px;
+           
+            border-left: 40px solid rgba(173, 173, 173, 0.66);
+        }
+
+        .logoimg{
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            float: left;
+            padding-top: 60px;
+            padding-left: 20px;
+        }
+        .flex-container {
+    display: flex;
+}
+
+        .flex-child {
+            flex: 1;
+            border: 2px solid rgb(231, 12, 63);
+        }  
+
+        .flex-child:first-child {
+            margin-right: 20px;
+        } 
+        .o3box{
+        background-color: rgb(45, 155, 180);
+        width: 100%;
+        height: 800px;
+        padding: 0px;
+        margin: 0px;
+        background-color: #ededf7;
+        padding-top: 50px;
+        background-color: #070808;
+        opacity: 1;
+        background-image: radial-gradient(#de1b1b 0.2px, #070808 0.2px);
+background-size: 4px 4px;
+        text-align: center;
+        
+        }
+
+        .box3{
+            border: 5px solid rgb(10, 132, 232);
+            margin: 40px;
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            box-shadow: 5px 10px #2332db;
+            align-content: center;
+            padding-top: 50px;
+            height: 500px;
+            align-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+           
+            border-left: 40px solid rgba(173, 173, 173, 0.66);
+        }
+
+        footer{
+            display: block;
+            background-color: #98ec07;
+            color: rgb(15, 6, 6);
+            height: 70px;
+            padding-top: 10px;
+            font-style: italic;
+            text-align: center;
+            font-size: 20px;
+            font-stretch: extra-expanded;
+            flex-direction: column;
+        }
+        .change{
+            text-align:justify;
+    font-size:30px;
+    text-indent:80px;
+    color:rgb(8, 8, 8);
+    border-color:rgb(8, 37, 184);
+    border-style: dashed;
+    border-width:10px;
+    padding:20px 50px 10px 60px;  
+    border-radius:30px;
+    float:left; 
+    width:45%; 
+    box-sizing:border-box;
+    margin:5px;
+    box-shadow:10px 10px 5px black; 
+        }
+        </style>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <ul>
+        <li><a href="#intro">About</a></li>
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">Project</a></li>
+      </ul>    
+    <a id="intro"><div class="obox"><pattern id="vmhpt" patternUnits="userSpaceOnUse" width="20" height="20"><circle cx="10" cy="10" r="4" fill="transparent" stroke="rgba(0,0,0,0.13)" stroke-width="1"></circle></pattern>
+        <div class="img1">
+            <img src="11.jpg" class="img1">
+        </div>
+        <div class="box">
+       <p>I’m <b>Neeta Rawat</b>B.Tech 3rd year student.
+    <br><br>
+    I’m from Kotdwara, Uttarakhand.
+    <br><br>
+    <span style="color: #132be0; font-weight: bold;"> Say Hello</span>, or keep scrolling.
+        </p><br>
+        <div id="social">
+..........<a class="googleplusBtn smGlobalBtn" href="https://www.google.com/" ></a>
+            <a class="pinterestBtn smGlobalBtn" href="https://in.pinterest.com/" ></a>
+            <a class="utube smGlobalBtn" href="https://www.youtube.com/" ></a>..........
+        </div> 
+    </div>    
+    </div>
+  </a>
+
+    <a id="bio">
+    <div class="o1box">
+        <img src="2.jpeg" class="logoimg"/>
+             <div class="box1">
+            <h2>BIO</h2><br>A little more about me....<br><p class="change"><br>I’m <b>Neeta Rawat</b>B.Tech 3rd year student.
+         <br><br>
+         I’m from Kotdwara, Uttarakhand.</p>
+         <p class="change">I’ve always loved spending way too much time on the computer, and spent my teens tinkering with Photoshop and building crappy websites.</p><br>
+         </div>    
+         </div></a>
+         <a id="contact">
+         <div class="o2box">
+            <img src="11.jpg" class="logoimg"/>
+            <div class="box2">
+           <p>I’m <b>Neeta Rawat</b>B.Tech 3rd year student.
+        <br><br>
+        I’m from Kotdwara, Uttarakhand.
+        <br>
+        <span style="color: #e75a08; font-weight: bold;"> Say Hello</span>, or keep scrolling.
+            </p>
+        </div>    
+        </div></a>
+
+
+
+        <a id="contact">
+            <div class="o3box">
+                <img src="11.jpg" class="logoimg"/>
+                <div class="box3">
+                <div class="flex-container">
+
+                    <div class="flex-child magenta">
+                        <span style="color: #f07203; font-weight: bold; float: left;">Vulcan.js</span>
+                        <br><br>
+                        <span style="color: #07266e; float: left; font-size: 25px;">An open-source full-stack app framework based on React, GraphQL, Meteor, and MongoDB. A.k.a. the “Rails for JavaScript”.
+                        </span><br><br>
+                        <span style="color: #3c042d; float: left; font-size: 25px;">An open-source full-stack app framework based on React, GraphQL, Meteor, and MongoDB. A.k.a. the “Rails for JavaScript”.
+                        </span><br><br>
+                    </div>
+                    
+                    <div class="flex-child green">
+                        Vulcan.js
+                        An open-source full-stack app framework based on React, GraphQL, Meteor, and MongoDB. A.k.a. the “Rails for JavaScript”.
+                        
+                        Discover Meteor
+                        I learned the Meteor JavaScript framework to build Telescope, and decided to reinvest the knowledge I had just acquired to co-author a book together with Tom Coleman.
+                    </div>
+                    
+                  </div>
+           </div>
+                  </div>
+            </div></a>
+
+
+
+<a id="about">
+<footer>
+    <pre>Made by Neeta Rawat of B.TECH.</pre>
+</footer></a>
+</body>
+</html>

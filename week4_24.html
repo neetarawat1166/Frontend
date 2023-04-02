@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>temp_convertor</title>
+		<script>
+			function convert() 
+			{
+				var inp =parseFloat(document.getElementById('temp').elements[0].value);
+				var inUnit = document.getElementById('temp').elements[1].value;
+				var outUnit = document.getElementById('temp').elements[3].value;
+				if((inUnit=='C') && (outUnit=='F'))
+				{
+					res = inp*9/5 + 32;
+				}
+				else if((inUnit=='F') && (outUnit=='C'))
+				{
+					res = (inp-32)*5/9;
+				}
+				else if((inUnit=='K') && (outUnit=='C'))
+				{
+					res = inp-273;
+				}
+				else if((inUnit=='C') && (outUnit=='K'))
+				{
+					res = inp+273;
+				}
+				else if((inUnit=='K') && (outUnit=='F'))
+				{
+					res = (inp-273)*9/5+32;
+				}
+				else if((inUnit=='F') && (outUnit=='K'))
+				{
+					res = (inp-32)*5/9+273;
+				}
+				else
+				{
+					res = inp;
+				}
+				
+				document.getElementById('temp').elements[2].value=res;
+			}
+        </script>
+    </head>
+    <body bgcolor="teal" align="center">
+		<br><br>
+        <h1 >TEMPERATURE CONVERTOR</h1>
+        <form id="temp" >
+		    <input type=number onchange="convert()" placeholder="Input"> 
+			<select name="input" onchange="convert()">
+				<option value = "K"> Kelvin </option>
+				<option value = "C"> Celsius </option>
+				<option value = "F"> Fahrenheit </option>
+			</select>
+			<br><br>	
+			<input type=text placeholder="output">
+			<select name="output" onchange="convert()">
+				<option value = "K"> Kelvin </option>
+				<option value = "C"> Celsius </option>
+				<option value = "F"> Fahrenheit </option>
+			</select>
+		</form>
+		
+    </body>
+</html>

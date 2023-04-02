@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <body bgcolor="lightgreen"><br><br><br><br><br><br><br><br><br>
+      <h1><center> <div id="display">
+
+        </div>
+        <table>
+            <tr>
+                <td><button id="start" onclick="x=setInterval(clock,1000)">Start Counter</button></td>
+                <td><button id="stop" onclick="clearInterval(x)">Stop Counter</button></td>
+            </tr>
+        </table>
+        <script>
+            var count=0;
+            function clock()
+            {
+                document.getElementById('display').innerHTML=count;
+                count=count+1;
+            }
+        </script></center></h1>
+    </body>
+</html>
